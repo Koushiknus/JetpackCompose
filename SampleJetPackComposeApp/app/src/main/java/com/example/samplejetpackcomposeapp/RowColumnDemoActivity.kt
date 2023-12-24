@@ -36,7 +36,7 @@ class RowColumnDemoActivity : ComponentActivity() {
                 Button(onClick = {
                     Log.i("Button1", "Clicked")
                 }, modifier = Modifier.padding(5.dp)) {
-                    Text(text = "Click me 3")
+                    Text(text = "Click me 5")
                 }
                 Text(text = "0")
                 Button(
