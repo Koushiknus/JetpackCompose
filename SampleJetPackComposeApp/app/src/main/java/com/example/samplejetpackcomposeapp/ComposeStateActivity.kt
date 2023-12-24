@@ -1,4 +1,4 @@
-package com.example.samplejetpackcomposeapp.ui.theme
+package com.example.samplejetpackcomposeapp
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
