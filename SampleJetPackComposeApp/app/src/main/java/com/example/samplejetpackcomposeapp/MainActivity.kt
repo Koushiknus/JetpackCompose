@@ -1,9 +1,11 @@
 package com.example.samplejetpackcomposeapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -16,21 +18,16 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SampleJetPackComposeAppTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
-            }
+           Greeting(name = "Koushik")
         }
     }
 }
 
 @Composable
 fun Greeting(name: String) {
+    Button(onClick = { Log.i("Test","ButtonClicked") }) {
+        Text(text = "Click Me $name!")
+    }
     Text(text = "Hello $name!")
 }
 
@@ -38,6 +35,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     SampleJetPackComposeAppTheme {
-        Greeting("Android")
+        Greeting("Koushik")
     }
 }
