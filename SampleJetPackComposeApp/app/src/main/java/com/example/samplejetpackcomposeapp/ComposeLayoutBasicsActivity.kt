@@ -12,7 +12,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Button
 import androidx.compose.material.Card
 import androidx.compose.material.Text
@@ -30,7 +32,16 @@ class ComposeLayoutBasicsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            UserCard()
+            UserList()
+        }
+    }
+
+    @Composable
+    fun UserList(){
+        Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+            for(i in 1..10){
+                UserCard()
+            }
         }
     }
 
@@ -38,7 +49,8 @@ class ComposeLayoutBasicsActivity : ComponentActivity() {
     fun UserCard(){
         Card(
             elevation = 4.dp,
-            modifier = Modifier.padding(12.dp)
+            modifier = Modifier
+                .padding(12.dp)
                 .fillMaxWidth()
                 .wrapContentHeight()
         ) {
