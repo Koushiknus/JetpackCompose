@@ -12,6 +12,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
@@ -36,10 +38,25 @@ class ComposeLayoutBasicsActivity : ComponentActivity() {
         }
     }
 
+    data class User(
+        val id : Int
+    )
+
+    val users = listOf(
+        User(1),
+        User(2),
+        User(3)
+    )
+
     @Composable
     fun UserList(){
-        Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+     /*   Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
             for(i in 1..10){
+                UserCard()
+            }
+        }*/
+        LazyColumn{
+            items(users){ user->
                 UserCard()
             }
         }
