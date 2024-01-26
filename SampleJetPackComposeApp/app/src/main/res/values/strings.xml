@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SampleJetPackComposeApp</string>
+    <string name="title_activity_state_hoisting">StateHoistingActivity</string>
 </resources>

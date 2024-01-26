@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Button
@@ -74,7 +75,7 @@ class ComposeLayoutBasicsActivity : ComponentActivity() {
                 UserCard()
             }
         }*/
-        LazyColumn{
+        LazyRow{
             items(users){ user->
                 UserCard()
             }
