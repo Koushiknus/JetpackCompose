@@ -13,36 +13,40 @@
         android:theme="@style/Theme.SampleJetPackComposeApp"
         tools:targetApi="31">
         <activity
+            android:name=".login.LoginActivity"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.SampleJetPackComposeApp" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ModifierCompose"
+            android:exported="true"
+            android:label="@string/title_activity_modifier_compose"
+            android:theme="@style/Theme.SampleJetPackComposeApp"></activity>
+        <activity
             android:name=".StateHoistingActivity"
             android:exported="true"
             android:label="@string/title_activity_state_hoisting"
-            android:theme="@style/Theme.SampleJetPackComposeApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.SampleJetPackComposeApp"></activity>
         <activity
             android:name=".practice.ComposePractice"
-            android:exported="false" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".ComposeLayoutBasicsActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ComposeVMSample"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ComposeStateActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".RowColumnDemoActivity"
             android:exported="true">
